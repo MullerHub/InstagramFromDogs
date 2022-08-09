@@ -10,6 +10,8 @@ input {
 body {
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: 'Spectral', Georgia;
+  --button-bg: #fb1;
+  --button-color: #764701;
   margin: 0px;
   padding-top: 4rem;
   color: var(--color);
