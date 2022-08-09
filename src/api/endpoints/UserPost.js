@@ -1,4 +1,5 @@
 import React from 'react'
+import './TokenPost'
 
 const UserPost = () => {
   const [username, setUsername] = React.useState('')
