@@ -1,4 +1,5 @@
 import React from 'react'
+import URL from '../URL';
 
 const TokenPost = () => {
   const [username, setUsername] = React.useState('')
@@ -7,7 +8,7 @@ const TokenPost = () => {
 
   function handleSubmit(event) {
     event.preventDefault()
-    fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
+    fetch(`${URL}/api/user`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

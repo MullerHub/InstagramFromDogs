@@ -1,16 +1,16 @@
 import React from 'react'
-
+import URL from '../URL';
 
 const PhotoGet = () => {
-  const [id, setId] = React.useState('')
+  const [query, setQuery] = React.useState('')
   function handleSubmit(event) {
     event.preventDefault()
-    fetch(`https://dogsapi.origamid.dev/json/api/photo/${id}`)
-      .then(response => {
+    fetch(`${URL}/api/photo/${query}`)
+      .then((response) => {
         console.log(response)
         return response.json()
       })
-      .then(json => {
+      .then((json) => {
         console.log(json)
         return json
       })
@@ -20,8 +20,9 @@ const PhotoGet = () => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        value="id"
-        onChange={({ target }) => setId(target.value)}
+        placeholder="?_total=1&_page=1&_user=6"
+        value={query}
+        onChange={({ target }) => setQuery(target.value)}
       />
       <button>Enviar</button>
     </form>

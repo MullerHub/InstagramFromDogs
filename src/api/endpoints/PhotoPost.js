@@ -1,4 +1,5 @@
 import React from 'react'
+import URL from '../URL';
 
 const PhotoPost = () => {
   const [token, setToken] = React.useState('')
@@ -15,19 +16,20 @@ const PhotoPost = () => {
     formData.append('nome', nome)
     formData.append('peso', peso)
     formData.append('idade', idade)
+    console.log(formData);
 
-    fetch('https://dogsapi.origamid.dev/json/api/photo', {
+    fetch(`${URL}/api/photo`, {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + token
       },
-      body: {}
+      body: formData,
     })
-      .then(response => {
+      .then((response) => {
         console.log(response)
         return response.json()
       })
-      .then(json => {
+      .then((json) => {
         console.log(json)
         return json
       })
