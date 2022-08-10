@@ -13,7 +13,7 @@
   transition: 0.2s;
 }
 
-.input:focus,
+.input:focus, 
 .input:hover {
   outline: none;
   border-color: #FB1;
@@ -22,8 +22,8 @@
 }
 
 .label {
-  display: block;
-  font-size: 1rem;
+  display: block;  
+  font-size: 1rem; 
   line-height: 1;
   padding-bottom: 0.5rem;
 }

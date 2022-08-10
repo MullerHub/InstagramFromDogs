@@ -2,20 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Input from '../Form/Input'
 import Button from '../Form/Button'
-
+import useForm from '../../Hooks/useForm'
 
 const LoginForm = () => {
-  const [username, setUsername] = React.useState('')
-  const [password, setPassword] = React.useState('')
+
+  const username = useForm();
+  const password = useForm();
+
 
   function handleSubmit(event) {
     event.preventDefault()
-    fetch('https://www.dogsapi.origamid.dev/json/jwt-auth', {
-      method: 'POST',
-      headers: {
+
+    if(username.validate() && password.validate()){
+      fetch('https://www.dogsapi.origamid.dev/json/jwt-auth', {
+        method: 'POST',
+        headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify()
     })
       .then(response => {
         console.log(response)
@@ -24,17 +28,17 @@ const LoginForm = () => {
       .then(json => {
         console.log(json)
       })
+    }
   }
 
   return (
     <section>
       <h1>Login titulo</h1>
       <form action="" onSubmit={handleSubmit}>
-        <Input label="Usuario" type="text" name="username" />
-        <Input label="Senha" type="password" name="password" />
+        <Input label="Usuario" type="text" name="username" {...username}/>
+        <Input label="Senha" type="password" name="password" {...password} />
 
-        <Button disabled >Entrar</Button>
-
+        <Button>Entrar</Button>
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
