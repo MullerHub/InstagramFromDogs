@@ -19,16 +19,18 @@
 }
 
 .login {
- color: var(--color); 
- display: flex;
- align-items: center;
+  color: var(--color);
+  display: flex;
+  align-items: center;
 }
 
 .login::after {
-    content: '';
-    display: inline-block;
-    width: 14px;
-    height: 17px;
-    background: url('../Assets/usuario.svg') no-repeat center center;
-    margin-left: .5rem;
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background: url('../Assets/usuario.svg') no-repeat center center;
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
 }

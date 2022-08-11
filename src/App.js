@@ -1,24 +1,22 @@
 import React from 'react';
 import './App.css'
-import Footer from './Components/Footer';
-import Header from './Components/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import Home from './Components/Home'
 import Login from './Components/Login/Login';
 import { UserStorage } from './UserContext';
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <div className='App'>
     <BrowserRouter>
     <UserStorage>
-
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login/*" element={<Login />} />         
+      <Route path="/login/*" element={<Login />} />
     </Routes>
-
     <Footer />
     </UserStorage>
     </BrowserRouter>
