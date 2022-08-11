@@ -5,7 +5,15 @@ const types = {
     regex:
       /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
     message: 'Preencha um email válido'
-  }
+  },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    message: 'A senha precisa ter maior segurança!'
+  },
+  number: {
+    regex: /^\d+$/,
+    message: 'Utilize apenas números.',
+  },
 }
 
 const useForm = (type) => {
