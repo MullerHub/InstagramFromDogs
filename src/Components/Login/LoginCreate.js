@@ -35,10 +35,12 @@ const LoginCreate = () => {
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Email" type="email" name="email" {...email} />
         <Input label="Senha" type="password" name="password" {...password} />
-        {loading ? (<Button disabled>Cadastrando...</Button>) :
-        (<Button>Cadastrar</Button>
+        {loading ? (
+          <Button disabled>Cadastrando...</Button>
+        ) : (
+          <Button>Cadastrar</Button>
         )}
-        <Error error = {error}/>
+        <Error error={error} />
       </form>
     </section>
   )
