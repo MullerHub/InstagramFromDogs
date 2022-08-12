@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import UserContext from '../../UserContext'
+import {UserContext} from '../../UserContext'
 import { ReactComponent as MinhasFotos } from '../../Assets/feed.svg'
 import { ReactComponent as StatsFoto } from '../../Assets/estatisticas.svg'
 import { ReactComponent as AddFotos } from '../../Assets/adicionar.svg'

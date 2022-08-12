@@ -42,8 +42,8 @@ export const UserStorage = ({ children }) => {
       window.localStorage.setItem('token', token)
       await getUser(token)
       navigate('/conta')
-    } catch (error) {
-      /*  setError(err.message) funciona mas o erro ai é meu */
+    } catch (err) {
+      setError(err.message)
       setLogin(false)
     } finally {
       setLoading(false)
@@ -81,5 +81,3 @@ export const UserStorage = ({ children }) => {
     </UserContext.Provider>
   )
 }
-
-export default UserContext
