@@ -14,15 +14,15 @@
   border: 1px solid #eee;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  background-color: #eee;
+  background: #eee;
   transition: 0.2s;
 }
 
-.textare:focus,
+.textarea:focus,
 .textarea:hover {
   outline: none;
   border-color: #fb1;
-  background: whitesmoke;
+  background: white;
   box-shadow: 0 0 0 3px #fea;
 }
 
