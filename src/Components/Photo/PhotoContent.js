@@ -33,7 +33,9 @@ const PhotoContent = ({ data }) => {
         </ul>
       </div>
       <PhotoComments id={photo.id} comments={comments} />
+
     </div>
+    
   )
 }
 
