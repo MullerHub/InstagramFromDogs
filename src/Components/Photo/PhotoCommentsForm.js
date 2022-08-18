@@ -5,7 +5,7 @@ import useFetch from '../../Hooks/useFetch'
 import Error from '../Helper/Error'
 import styles from './PhotoCommentsForm.module.css'
 
-const PhotoCommentsForm = ({ id, setComments }) => {
+const PhotoCommentsForm = ({ id, setComments, single }) => {
   const [comment, setComment] = React.useState('')
   const { request, error } = useFetch()
 
@@ -15,20 +15,26 @@ const PhotoCommentsForm = ({ id, setComments }) => {
     const { response, json } = await request(url, options)
     if (response.ok) {
       setComment('')
-      setComments((comments) => [...comments, json])
+      setComments(comments => [...comments, json])
     }
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${single ? styles.single : ''}`}
+      onSubmit={handleSubmit}
+    >
       <textarea
         className={styles.textarea}
         id="comment"
         name="comment"
-        placeholder="comente..." // ajustar o plcaholder com uma label por cima do textarea/formulario
+        placeholder="COMEN-TCHÊ..." 
         value={comment}
         onChange={({ target }) => setComment(target.value)}
-      />
+        />
+
+    {/* ajustar o placeholder com uma label por cima do textarea/formulario */}
+     
       <button className={styles.button}>
         <Enviar />
       </button>
