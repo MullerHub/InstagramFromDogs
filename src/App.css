@@ -61,7 +61,6 @@ a {
 
 .mainContainer {
   margin-top: 2rem;
-  
 }
 
 .title {
@@ -99,7 +98,12 @@ a {
   }
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
 
-
-
-
+.AppBody {
+  flex: 1;
+}
