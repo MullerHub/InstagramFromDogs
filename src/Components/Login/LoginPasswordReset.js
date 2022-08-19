@@ -5,6 +5,7 @@ import useForm from '../../Hooks/useForm'
 import useFetch from '../../Hooks/useFetch'
 import { PASSWORD_RESET } from '../../Api'
 import { Navigate } from 'react-router-dom'
+import Error from '../Helper/Error'
 
 const LoginPasswordReset = () => {
   const [login, setLogin] = React.useState('')
@@ -22,7 +23,7 @@ const LoginPasswordReset = () => {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    if (passowrd.validade()) {
+    if (password.validade()) {
       const { url, options } = PASSWORD_RESET({
         login,
         key,
