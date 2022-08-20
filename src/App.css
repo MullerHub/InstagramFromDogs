@@ -111,3 +111,35 @@ a {
 .VictoryContainer {
   height: initial !important
 }
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--button-bg) transparent;
+  
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1rem;
+  margin: 1rem;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--button-bg);
+  width: 15px;
+  border-radius: 999px;
+  border: 3px solid rgba(255, 231, 17, 0.488);
+}
+
+@media (max-width: 40rem) {
+  *::-webkit-scrollbar {
+    width: 0.7rem;
+    border-radius: 999px;
+  }
+}
