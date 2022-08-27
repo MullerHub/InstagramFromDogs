@@ -15,11 +15,11 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 
-### Para iniciar o projeto <br/> (baixar dependencias para inicializar)execute 
+### Para iniciar o projeto <br/> (baixar dependencias para inicializar), execute 
 
 ### `npm install`
 
-Após a instalação das dependencias,  execute:
+Após a instalação das dependencias, execute:
 
 ### `npm run dev`
 
